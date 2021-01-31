@@ -12,12 +12,12 @@ public class Threads {
     }
 
     public static void cutArray(){
-        long start = System.currentTimeMillis();
+        long startTime = System.currentTimeMillis();
         for (int i = 0; i < mass.length; i++) {
             mass[i] = (float) (mass[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
         }
         long end = System.currentTimeMillis();
-        long averageTime = end - start;
+        long averageTime = end - startTime;
         System.out.println("Working time by 1 thread: " + averageTime + "ms");
         System.out.println(mass[HALF]);
     }
